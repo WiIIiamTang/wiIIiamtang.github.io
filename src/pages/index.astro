@@ -3,6 +3,7 @@ import { Image } from '@astrojs/image/components';
 import { SITE } from '~/config.mjs';
 import Layout from '~/layouts/PageLayout.astro';
 import coverImage from '~/assets/images/cover.jpeg';
+import ProjectsCard from '~/components/card/ProjectsCard.astro';
 
 const meta = {
   title: SITE.title,
@@ -24,4 +25,72 @@ const meta = {
       </div>
     </div>
   </div>
+  <ProjectsCard
+    title="Projects"
+    subtitle="Things I work/worked on"
+    items={[
+      {
+        title: 'drawamogsus',
+        description: 'Social deduction drawing game',
+        icon: 'flat-color-icons:neutral-decision',
+        link: 'https://drawamogsus.williamtang.me',
+        tech: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Socket.IO', 'NextAuth.js', 'Express'],
+      },
+      {
+        title: 'discordwrapped',
+        description: 'Website that displays various statistics and analytics about your server',
+        icon: 'flat-color-icons:line-chart',
+        link: 'https://discordwrapped.williamtang.me',
+        tech: ['SvelteKit', 'Tailwind CSS', 'MongoDB'],
+      },
+      {
+        title: 'render-image-links',
+        description: 'A vscode extension that displays images/gifs on hover in the editor.',
+        icon: 'flat-color-icons:image-file',
+        link: 'https://github.com/WiIIiamTang/render-image-links',
+        tech: ['TypeScript'],
+      },
+      {
+        title: 'billbot',
+        description:
+          'Discord bot that provides music, moderation, and tracks server stats. Consumed by discordwrapped.',
+        icon: 'flat-color-icons:self-service-kiosk',
+        link: 'https://github.com/WiIIiamTang/billbot2',
+        tech: ['discord.py', 'Docker'],
+      },
+      {
+        title: 'billbot-fleet',
+        description: 'A connectivity and data platform. Links my apps together.',
+        icon: 'flat-color-icons:parallel-tasks',
+        link: 'https://bbfleet.williamtang.me',
+        tech: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Prisma', 'NextAuth.js', 'tRPC', 'Supabase'],
+      },
+    ]}
+  />
+
+  <ProjectsCard
+    subtitle="Contributions"
+    items={[
+      {
+        title: 'mlrd',
+        description: 'Command line tool to download lecture videos from McGill',
+        icon: 'flat-color-icons:graduation-cap',
+        link: 'https://github.com/WiIIiamTang/mlrd',
+      },
+      {
+        title: 'Cutout',
+        description:
+          'Reproduction, verification of the paper "Improved Regularization of Convolutional Neural Networks with Cutout"',
+        icon: 'flat-color-icons:questions',
+        link: 'https://github.com/WiIIiamTang/Cutout',
+      },
+      {
+        title: 'SummaRuNNer',
+        description:
+          'A modified PyTorch Implementation of SummaRuNNer used for our project on out-of-domain extractive text summarization.',
+        icon: 'flat-color-icons:view-details',
+        link: 'https://github.com/WiIIiamTang/SummaRuNNer',
+      },
+    ]}
+  />
 </Layout>
