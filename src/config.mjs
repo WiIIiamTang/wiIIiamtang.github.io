@@ -1,15 +1,14 @@
-import defaultImage from './assets/images/default.png';
+import defaultImage from './assets/images/cover.jpeg';
 
 const CONFIG = {
-  name: 'AstroWind',
+  name: 'william tang',
 
   origin: 'https://williamtang.me',
   basePathname: '/',
   trailingSlash: false,
 
-  title: 'AstroWind — Free template for create a website with Astro + Tailwind CSS',
-  description:
-    '🚀 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs.',
+  title: 'bill',
+  description: 'bill',
   defaultImage: defaultImage,
 
   defaultTheme: 'system', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"

@@ -8,41 +8,12 @@ import { getHomePermalink, getBlogPermalink, getPermalink } from '~/utils/permal
 
 const links = [
   {
-    text: 'Pages',
-    links: [
-      {
-        text: 'Features',
-        href: '#',
-      },
-      {
-        text: 'Pricing',
-        href: '#',
-      },
-      {
-        text: 'About us',
-        href: '#',
-      },
-      {
-        text: 'Contact',
-        href: '#',
-      },
-      {
-        text: 'Terms',
-        href: getPermalink('/terms'),
-      },
-      {
-        text: 'Privacy policy',
-        href: getPermalink('/privacy'),
-      },
-    ],
+    text: 'About',
+    href: getPermalink('/about'),
   },
   {
-    text: 'Resources',
-    href: getPermalink('useful-resources-to-create-websites', 'post'),
-  },
-  {
-    text: 'Blog',
-    href: getBlogPermalink(),
+    text: 'Projects',
+    href: getPermalink('/projects'),
   },
 ];
 ---
@@ -95,27 +66,10 @@ const links = [
             </li>
           ))
         }
-        <li class="md:hidden">
-          <a
-            class="font-bold hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
-            href="https://github.com/onwidget/astrowind">Github</a
-          >
-        </li>
       </ul>
       <div class="md:self-center flex items-center md:mb-0 ml-4">
         <div class="hidden items-center md:flex">
           <ToggleTheme iconClass="w-5 h-5" />
-          <a
-            class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
-            aria-label="RSS Feed"
-            href={getPermalink('/rss.xml')}
-          >
-            <Icon name="tabler:rss" class="w-5 h-5" />
-          </a>
-          <a
-            class="btn w-full ml-3 py-2.5 px-5 font-semibold text-gray-600 shadow-none text-sm"
-            href="https://github.com/onwidget/astrowind">Download</a
-          >
         </div>
       </div>
     </nav>
