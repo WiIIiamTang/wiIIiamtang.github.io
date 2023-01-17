@@ -4,6 +4,7 @@ import { SITE } from '~/config.mjs';
 import Layout from '~/layouts/PageLayout.astro';
 import coverImage from '~/assets/images/cover.jpeg';
 import ProjectsCard from '~/components/card/ProjectsCard.astro';
+import StepsCard from '~/components/card/StepsCard.astro';
 
 const meta = {
   title: SITE.title,
@@ -24,6 +25,37 @@ const meta = {
         </div>
       </div>
     </div>
+  </div>
+  <div>
+    <StepsCard
+      title="Experience"
+      items={[
+        {
+          title: 'Software Engineer',
+          description: 'Amazon; AWS RDS Open Source, MySQL & MariaDB; Present',
+          icon: 'cib:amazon-aws',
+        },
+        {
+          title: 'Software Engineer Intern',
+          description: 'Amazon; AWS RDS Open Source, MySQL & MariaDB; Summer 2022',
+          icon: 'cib:amazon-aws',
+        },
+        {
+          title: 'Web Developer Intern',
+          description: 'McGill University; QCBS; 2021-2022',
+          icon: 'la:university',
+        },
+        {
+          title: 'Neuroscience Research Intern',
+          description: 'Dawson College; Dawson Research in Neuroscience group; Summer 2019',
+          icon: 'la:university',
+        },
+        {
+          title: '',
+          icon: 'codicon:debug-start',
+        },
+      ]}
+    />
   </div>
   <ProjectsCard
     title="Projects"
