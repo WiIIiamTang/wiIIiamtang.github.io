@@ -12,6 +12,15 @@ module.exports = {
       fontFamily: {
         sans: ["'InterVariable'", ...defaultTheme.fontFamily.sans],
       },
+      keyframes: {
+        fadeUp: {
+          '0%': { opacity: 0, transform: 'translateY(10px)' },
+          '100%': { opacity: 1, transform: 'translateY(0)' },
+        },
+      },
+      animation: {
+        fadeUp: 'fadeUp 1s ease-in-out 1',
+      },
     },
   },
   plugins: [require('@tailwindcss/typography')],
