@@ -50,6 +50,13 @@ import { SITE } from '~/config.mjs';
       localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
     });
 
+    const emailButton = document.getElementById('showemailbutton');
+    const email = document.getElementById('email');
+    emailButton?.addEventListener('click', () => {
+      // toggle hidden and opacity
+      email?.classList.toggle('text-opacity-0');
+    });
+
     attachEvent('[data-aw-social-share]', 'click', function (_, elem) {
       const network = elem.getAttribute('data-aw-social-share');
       const url = encodeURIComponent(elem.getAttribute('data-aw-url'));
